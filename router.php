@@ -8,11 +8,11 @@
     $router = new Router();
 
     #                 endpoint      verbo     controller           método
-    $router->addRoute('equipos',     'GET',    'TaskApiController', 'get'   ); # TaskApiController->get($params)
-    $router->addRoute('equipos',     'POST',   'TaskApiController', 'create');
-    $router->addRoute('equipos/:ID', 'GET',    'TaskApiController', 'get'   );
-    $router->addRoute('equipos/:ID', 'PUT',    'TaskApiController', 'update');
-    $router->addRoute('equipos/:ID', 'DELETE', 'TaskApiController', 'delete');
+    $router->addRoute('equipos',     'GET',    'EquipoApiController', 'get'   ); # TaskApiController->get($params)
+    $router->addRoute('equipos',     'POST',   'EquipoApiController', 'create');
+    $router->addRoute('equipos/:ID', 'GET',    'EquipoApiController', 'get'   );
+    $router->addRoute('equipos/:ID', 'PUT',    'EquipoApiController', 'update');
+    $router->addRoute('equipos/:ID', 'DELETE', 'EquipoApiController', 'delete');
     
     $router->addRoute('user/token', 'GET',    'UserApiController', 'getToken'   ); # UserApiController->getToken()
     

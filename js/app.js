@@ -3,7 +3,7 @@
 const URL = "api/equipos/";
 let teams = [];
 let form = document.querySelector('#task-form');
-form.addEventListener('submit', insertTask);
+form.addEventListener('submit', insertEquipo);
 
 async function getAll() {
     try {
@@ -12,13 +12,13 @@ async function getAll() {
             throw new Error('Recurso no existe');
         }
         teams = await response.json();
-        showTasks();
+        showEquipos();
     } catch (e) {
         console.log(e);
     }
 }
 
-async function insertTask(e) {
+async function insertEquipo(e) {
     e.preventDefault();
     
     let data = new FormData(form);
@@ -42,7 +42,7 @@ async function insertTask(e) {
         let newTask = await response.json();
 
         teams.push(newTask);
-        showTasks();
+        showEquipos();
 
         form.reset();
     } catch (error) {
@@ -51,7 +51,7 @@ async function insertTask(e) {
     }
 } 
 
-async function deleteTask(e) {
+async function deleteEquipo(e) {
     e.preventDefault();
     try {
         let id = e.target.dataset.team;
@@ -61,7 +61,7 @@ async function deleteTask(e) {
         }
 
         teams = teams.filter(team => team.id != id);
-        showTasks();
+        showEquipos();
     } catch (error) {
         console.log(error);
         // Mostrar mensaje de error al usuario si es necesario
@@ -70,7 +70,7 @@ async function deleteTask(e) {
 
 
 
-function showTasks() {
+function showEquipos() {
     let ul = document.querySelector("#task-list");
     ul.innerHTML = "";
     for (const team of teams) {
@@ -87,7 +87,7 @@ function showTasks() {
 
     const btnsDelete = document.querySelectorAll('a.btn-delete');
     for (const btnDelete of btnsDelete) {
-        btnDelete.addEventListener('click', deleteTask);
+        btnDelete.addEventListener('click', deleteEquipo);
     }
 
    
