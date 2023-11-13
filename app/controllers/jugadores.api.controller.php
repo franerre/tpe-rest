@@ -101,5 +101,7 @@ class JugadoresApiController extends ApiController {
             $this->view->response('El jugador con id=' . $id . ' no existe.', 404);
         }
     }
+
+
 }
 ?>

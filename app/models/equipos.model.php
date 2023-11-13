@@ -42,9 +42,9 @@ class EquipoModel  extends Model {
         $query->execute([$id]);
     }
 
-    function updateEquipo($id) {    
-        $query = $this->db->prepare('UPDATE equipos SET finalizada = 1 WHERE id = ?');
-        $query->execute([$id]);
+    function updateEquipo($id,$equipo, $liga, $pais) {
+        $query = $this->db->prepare('UPDATE equipos SET equipo = ?, liga = ?, pais = ? WHERE id = ?');
+        $query->execute([$equipo, $liga, $pais,$id]);
     }
 
     function updateEquipoData($id, $equipo, $liga, $pais) {    

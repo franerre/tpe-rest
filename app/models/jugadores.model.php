@@ -46,8 +46,8 @@ class JugadorModel  extends Model {
         $query->execute([$id]);
     }
 
-    function updateJugador($id) {    
-        $query = $this->db->prepare('UPDATE jugadores SET finalizada = 1 WHERE id = ?');
+    function updateJugador($id, $nombre, $apellido, $id_equipo) {
+        $query = $this->db->prepare('UPDATE jugadores SET nombre = ?, apellido = ?, id_equipo = ? WHERE id = ?');
         $query->execute([$id]);
     }
 
