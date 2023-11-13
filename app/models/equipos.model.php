@@ -28,6 +28,7 @@ class EquipoModel  extends Model {
 
     /**
      * Inserta la tarea en la base de datos
+     * revisar, porque se agrega solo cuando se actualiza la pagina
      */
     function insertEquipo($equipo, $liga, $pais) {
         $query = $this->db->prepare('INSERT INTO equipos (equipo, liga, pais) VALUES(?,?,?)');

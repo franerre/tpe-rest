@@ -1,8 +1,9 @@
-"use strict";
+"use strict";                                                
 
 const URL = "api/equipos/";
+
 let teams = [];
-let form = document.querySelector('#task-form');
+let form = document.querySelector('#team-form');
 form.addEventListener('submit', insertEquipo);
 
 async function getAll() {
@@ -38,12 +39,16 @@ async function insertEquipo(e) {
         if (!response.ok) {
             throw new Error('Error del servidor');
         }
+        
+        let newTeam = await response.json();
 
-        let newTask = await response.json();
+        // Agrega el nuevo equipo al array
+        teams.push(newTeam);
 
-        teams.push(newTask);
+        // Muestra los equipos actualizados en la página
         showEquipos();
 
+        // Limpia el formulario
         form.reset();
     } catch (error) {
         console.log(error);
@@ -51,9 +56,10 @@ async function insertEquipo(e) {
     }
 } 
 
+
 async function deleteEquipo(e) {
     e.preventDefault();
-    try {
+    try {                                                    
         let id = e.target.dataset.team;
         let response = await fetch(URL + id, { method: 'DELETE' });
         if (!response.ok) {
@@ -71,14 +77,15 @@ async function deleteEquipo(e) {
 
 
 function showEquipos() {
-    let ul = document.querySelector("#task-list");
+    let ul = document.querySelector("#team-list");
     ul.innerHTML = "";
     for (const team of teams) {
         let html = `
             <li class='list-group-item d-flex justify-content-between align-items-center'>
-                <span>${team.equipo} - ${team.liga} - ${team.pais}</span>
+                <span> <b>${team.equipo}</b>  ${team.liga}  ${team.pais}</span>
                 <div class="ml-auto">
                     <a href='#' data-team="${team.id}" type='button' class='btn btn-danger btn-delete'>Borrar</a>
+                    <a href='#' data-player="${team.id}" type='button' class='btn btn-primary edit-button'>editar</a>
                 </div>
             </li>
         `;

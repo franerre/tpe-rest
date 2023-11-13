@@ -14,18 +14,13 @@ class EquipoApiController extends ApiController {
     }
     
     function get($params = []) {
-       
-        
-
-        
-
         if (empty($params)) {
             $equipos = $this->model->getEquipos();
             $this->view->response($equipos, 200);
         } else {
             $Equipo = $this->model->getEquipo($params[':ID']);
             if (!empty($Equipo)) {
-                if ($params[':subrecurso']) {
+                if (isset($params[':subrecurso']) && $params[':subrecurso']) {
                     switch ($params[':subrecurso']) {
                         case 'equipo':
                             $this->view->response($Equipo->equipo, 200);
