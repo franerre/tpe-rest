@@ -1,5 +1,5 @@
 
-diagrama entidad relación (DER): https://github.com/franerre/tpweb2/blob/master/diagrama_entidad_relación(DER).jpg
+
 
 # API FUTBOL ⚽
 
