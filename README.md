@@ -218,7 +218,7 @@ Se modifica y se guarda en la base de datos
 ### MODIFICAR UN JUGADOR
 
 ```http
-  PUT /tpe-rest-main/api/jugadores/66
+  PUT /tpe-rest-main/api/jugadores/3
 ```
 #### ejemplo:
 
@@ -232,3 +232,29 @@ Se modifica y se guarda en la base de datos
 ```
 Se modifica y se guarda en la base de datos
 
+### OBTENER NOMBRE DE UN EQUIPO
+
+```http
+  GET /tpe-rest-main/api/equipos/3/equipo (si queres saber la liga reemplaza equipo por "liga" lo mismo para pais, "pais" )
+```
+#### ejemplo:
+
+```json
+[
+{
+    "Napoli"
+}
+
+### OBTENER NOMBRE DE UN JUGADOR
+
+```http
+  GET /tpe-rest-main/api/jugadores/2/nombre (si queres saber el apellido reemplaza nombre por "apellido" lo mismo para id_equipo, "id_equipo")
+```
+#### ejemplo:
+
+```json
+[
+{
+    "Robert"
+}
+  
