@@ -227,7 +227,7 @@ Se modifica y se guarda en la base de datos
         "id": 66,
         "nombre": "Nombre..",
         "apellido": "Apellido..",
-        "id_equipo": ID del equipo     
+        "id_equipo": "ID del equipo.."     
     ]
 ```
 Se modifica y se guarda en la base de datos
