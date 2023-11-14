@@ -166,7 +166,7 @@ se puede editar, eliminar, crear entre algunas opciones.
       (la ID No es necesario modificar ya que se incrementa sola) ⚠️
         "nombre": "Nombre..",
         "apellido": "Apellido..",
-        "id_equipo": Id del equipo..
+        "id_equipo": "id del equipo.."
 }
     ]
 ```
