@@ -13,7 +13,7 @@ se puede editar, eliminar, crear entre algunas opciones.
 ### OBTENER TODOS LOS EQUIPOS
 
 ```http
-  GET /tpe-rest/api/equipos
+  GET /tpe-rest-main/api/equipos
 ```
 #### ejemplo:
 
@@ -44,7 +44,7 @@ se puede editar, eliminar, crear entre algunas opciones.
 ### OBTENER TODO LOS JUGADORES
 
 ```http
-  GET /tpe-rest/api/jugadores
+  GET /tpe-rest-main/api/jugadores
 ```
 #### ejemplo:
 
@@ -103,7 +103,7 @@ se puede editar, eliminar, crear entre algunas opciones.
 ### OBTENER EQUIPO POR ID
 
 ```http
-  GET /tpe-rest/api/equipos/3
+  GET /tpe-rest-main/api/equipos/3
 ```
 #### ejemplo:
 
@@ -121,14 +121,14 @@ se puede editar, eliminar, crear entre algunas opciones.
 ### OBTENER JUGADOR POR ID
 
 ```http
-  GET /tpe-rest/api/jugadores/66
+  GET /tpe-rest-main/api/jugadores/3
 ```
 #### ejemplo:
 
 ```json
 [
 {
-    "id": 66,
+    "id": 3,
     "nombre": "Ferran ",
     "apellido": "Torres",
     "id_equipo": 9
@@ -139,7 +139,7 @@ se puede editar, eliminar, crear entre algunas opciones.
 ### CREAR UN NUEVO EQUIPO
 
 ```http
-  POST /tpe-rest/api/equipos/
+  POST /tpe-rest-main/api/equipos/
 ```
 #### ejemplo:
 
@@ -156,7 +156,7 @@ se puede editar, eliminar, crear entre algunas opciones.
 ### CREAR UN NUEVO JUGADOR
 
 ```http
-  POST /tpe-rest/api/jugadores/
+  POST /tpe-rest-main/api/jugadores/
 ```
 #### ejemplo:
 
@@ -173,7 +173,7 @@ se puede editar, eliminar, crear entre algunas opciones.
 ### ELIMINAR UN EQUIPO 
 
 ```http
-  DELETE /tpe-rest/api/equipos/3
+  DELETE /tpe-rest-main/api/equipos/3
 ```
 #### ejemplo:
 
@@ -187,21 +187,21 @@ se puede editar, eliminar, crear entre algunas opciones.
 ### ELIMINAR UN JUGADOR 
 
 ```http
-  DELETE /tpe-rest/api/jugadores/66
+  DELETE /tpe-rest-main/api/jugadores/3
 ```
 #### ejemplo:
 
 ```json
 [
 {
-      "El jugador con id=66 ha sido borrado."
+      "El jugador con id=3 ha sido borrado."
 }
     ]
 ```
 ### MODIFICAR UN EQUIPO
 
 ```http
-  PUT /tpe-rest/api/equipos/3
+  PUT /tpe-rest-main/api/equipos/3
 ```
 #### ejemplo:
 
@@ -218,13 +218,13 @@ Se modifica y se guarda en la base de datos
 ### MODIFICAR UN JUGADOR
 
 ```http
-  PUT /tpe-rest/api/jugadores/66
+  PUT /tpe-rest-main/api/jugadores/66
 ```
 #### ejemplo:
 
 ```json
 [
-        "id": 66,
+        "id": 3,
         "nombre": "Nombre..",
         "apellido": "Apellido..",
         "id_equipo": "ID del equipo.."     
