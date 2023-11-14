@@ -245,7 +245,7 @@ Se modifica y se guarda en la base de datos
     "Napoli"
 }
 ]
-
+```
 
 
 ### OBTENER NOMBRE DE UN JUGADOR
